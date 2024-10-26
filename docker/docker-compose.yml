@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: xmrbank_mariadb
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - xmrbank_mariadb:/var/lib/mysql
+
+  adminer:
+    container_name: xmrbank_adminer
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+volumes:
+  xmrbank_mariadb:
+    name: xmrbank_mariadb
