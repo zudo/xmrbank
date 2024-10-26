@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["api", "core", "rpc", "sql"]
+members = ["api", "core", "main", "rpc", "sql"]
 
 [workspace.dependencies]
 api = { path = "api" }
