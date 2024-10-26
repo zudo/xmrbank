@@ -1,10 +1,11 @@
 [workspace]
 resolver = "2"
-members = ["api", "rpc", "sql"]
+members = ["api", "core", "rpc", "sql"]
 
 [workspace.dependencies]
 api = { path = "api" }
 sql = { path = "sql" }
+core = { path = "core" }
 chrono = { version = "0.4.38", features = ["serde"] }
 clap = { version = "4.5.11", features = ["derive", "env"] }
 dashmap = "6.0.1"
