@@ -1,0 +1,4 @@
+/target
+rustc-ice*
+.env
+.env.prod

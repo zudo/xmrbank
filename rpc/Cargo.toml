@@ -1,0 +1,9 @@
+[package]
+name = "rpc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tarpc = { workspace = true }
+futures = { workspace = true }
+rust_decimal = { workspace = true }
